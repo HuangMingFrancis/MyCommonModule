@@ -1,6 +1,7 @@
 package com.francis.commonmodule.test;
 
 import com.francis.commonmodule.base.BasePresenter;
+import com.francis.commonmodule.data.TestRepository;
 
 /**
  * Created by Francis on 2018/9/8.
@@ -19,5 +20,6 @@ public class TestPresenter extends BasePresenter<ITestView> {
 
     public void getContent() {
         view.showContent("I am Test");
+        TestRepository.getINSTANCE().getGithubService("octocat");
     }
 }
